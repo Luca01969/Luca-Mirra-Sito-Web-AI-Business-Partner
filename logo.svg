@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" width="400" height="160">
+  <defs>
+    <!-- gradient for the orange node glow -->
+    <radialGradient id="glowOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF6B35" stop-opacity="0"/>
+    </radialGradient>
+    <!-- subtle navy gradient for depth on connecting lines -->
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E4E78" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#1E4E78" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FF6B35" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- MARK (left side, 140×140 area centered at 80,80) -->
+  <!-- ══════════════════════════════════════════ -->
+
+  <!-- Connecting lines (drawn first, behind nodes) -->
+  <!-- vertical spine: top-node → mid-node -->
+  <line x1="80" y1="28" x2="80" y2="68" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- vertical spine: mid-node → bottom-node -->
+  <line x1="80" y1="92" x2="80" y2="132" stroke="#1E4E78" stroke-width="2.5" stroke-opacity="0.4" stroke-linecap="round"/>
+  <!-- horizontal arm: mid-node → right-node (the orange AI node) -->
+  <line x1="104" y1="80" x2="134" y2="80" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- diagonal brace: top-node → right-node (structural tension) -->
+  <line x1="96" y1="36" x2="134" y2="72" stroke="#1E4E78" stroke-width="1.5" stroke-opacity="0.18" stroke-linecap="round"/>
+
+  <!-- Orange glow halo (behind the orange node) -->
+  <circle cx="148" cy="80" r="28" fill="url(#glowOrange)"/>
+
+  <!-- NODE: Top (input) — small, navy -->
+  <circle cx="80" cy="24" r="7" fill="#1E4E78"/>
+
+  <!-- NODE: Mid-left (process hub) — medium, navy, the structural core -->
+  <circle cx="80" cy="80" r="12" fill="#1E4E78"/>
+  <!-- inner ring for depth -->
+  <circle cx="80" cy="80" r="6" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.18"/>
+
+  <!-- NODE: Bottom (output) — small, navy -->
+  <circle cx="80" cy="136" r="7" fill="#1E4E78"/>
+
+  <!-- NODE: Right — ORANGE AI node, the accent/spark -->
+  <circle cx="148" cy="80" r="11" fill="#FF6B35"/>
+  <!-- inner pulse ring -->
+  <circle cx="148" cy="80" r="5.5" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-opacity="0.3"/>
+
+  <!-- Small connector dots at line joints for polish -->
+  <circle cx="80" cy="68" r="2.2" fill="#1E4E78" opacity="0.35"/>
+  <circle cx="80" cy="92" r="2.2" fill="#1E4E78" opacity="0.35"/>
+  <circle cx="104" cy="80" r="2.2" fill="#1E4E78" opacity="0.35"/>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- WORDMARK (right side) -->
+  <!-- ══════════════════════════════════════════ -->
+
+  <!-- Primary name -->
+  <text x="185" y="78" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="38" fill="#1E4E78" letter-spacing="-0.5">Luca Mirra</text>
+
+  <!-- Divider line between name and tagline -->
+  <rect x="185" y="90" width="42" height="2.2" rx="1.1" fill="#FF6B35"/>
+
+  <!-- Tagline -->
+  <text x="185" y="112" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="13.5" fill="#1E4E78" opacity="0.5" letter-spacing="1.8">AI BUSINESS PARTNER</text>
+</svg>
